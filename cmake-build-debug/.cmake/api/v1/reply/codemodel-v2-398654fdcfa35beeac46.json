@@ -6,7 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.26"
@@ -28,7 +28,7 @@
 					[
 						0
 					],
-					"name" : "code",
+					"name" : "project",
 					"targetIndexes" : 
 					[
 						0,
@@ -40,15 +40,15 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "code::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-code-Debug-633e17bec0f0ec8102a6.json",
-					"name" : "code",
+					"id" : "project::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-project-Debug-1e7930bd7839df693313.json",
+					"name" : "project",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "str::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-str-Debug-926403e6436a94211c7e.json",
+					"jsonFile" : "target-str-Debug-0c4f9e4b85e77c7137c9.json",
 					"name" : "str",
 					"projectIndex" : 0
 				}
@@ -58,8 +58,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/ivanu/CLionProjects/lab_OP_17/cmake-build-debug",
-		"source" : "C:/Users/ivanu/CLionProjects/lab_OP_17"
+		"build" : "/Users/ivan/Documents/GitHub/lab_OP_17/cmake-build-debug",
+		"source" : "/Users/ivan/Documents/GitHub/lab_OP_17"
 	},
 	"version" : 
 	{
