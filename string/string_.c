@@ -1,8 +1,6 @@
 //
 // Created by ivanu on 13.04.2024.
 //
-
-#include <stdlib.h>
 #include <ctype.h>
 #include "string_.h"
 
@@ -23,7 +21,7 @@ char *find(char *begin, char *end, int ch) {
 }
 
 char *findNonSpace(char *begin) {
-    while (*begin != '\0'){
+    while (*begin != '\0') {
         if (!isspace(*begin))
             return begin;
 
@@ -33,8 +31,8 @@ char *findNonSpace(char *begin) {
     return begin;
 }
 
-char* findSpace(char *begin){
-    while (*begin != '\0'){
+char *findSpace(char *begin) {
+    while (*begin != '\0') {
         if (isspace(*begin))
             return begin;
 
@@ -42,4 +40,15 @@ char* findSpace(char *begin){
     }
 
     return begin;
+}
+
+char* findNonSpaceReverse(char *rbegin, const char *rend){
+    while (rbegin != rend){
+        if(!isspace(*rbegin))
+            return rbegin;
+
+        rbegin--;
+    }
+
+    return rbegin;
 }
