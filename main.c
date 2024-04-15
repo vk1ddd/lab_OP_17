@@ -94,12 +94,30 @@ void findNonSpaceReverse_test(){
     findNonSpaceReverse_test3();
 }
 
+void findSpaceReverse_test1() {
+    char str[] = "Hello World";
+    char* result = findSpaceReverse(&str[10], str);
+    assert(*result == ' ');
+}
+
+void findSpaceReverse_test2() {
+    char str[] = "Hello";
+    char* result = findSpaceReverse(&str[4], str);
+    assert(result == str - 1);
+}
+
+void findSpaceReverse_test(){
+    findSpaceReverse_test1();
+    findSpaceReverse_test2();
+}
+
 void test() {
     strlen_test();
     find_test();
     findNonSpace_test();
     findSpace_test();
     findNonSpaceReverse_test();
+    findSpaceReverse_test();
 }
 
 int main() {
