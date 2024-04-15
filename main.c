@@ -103,12 +103,33 @@ void findSpaceReverse_test1() {
 void findSpaceReverse_test2() {
     char str[] = "Hello";
     char* result = findSpaceReverse(&str[4], str);
-    assert(result == str - 1);
+    assert(result == str);
 }
 
 void findSpaceReverse_test(){
     findSpaceReverse_test1();
     findSpaceReverse_test2();
+}
+
+void strcmp_test1() {
+    const char *str1 = "Hello";
+    const char *str2 = "Hello";
+
+    int result = strcmp_(str1, str2);
+    assert(result == 0);
+}
+
+void strcmp_test2() {
+    const char *str1 = "Hello";
+    const char *str2 = "World";
+
+    int result = strcmp_(str1, str2);
+    assert(result < 0);
+}
+
+void strcmp_test(){
+    strcmp_test1();
+    strcmp_test2();
 }
 
 void test() {
@@ -118,6 +139,7 @@ void test() {
     findSpace_test();
     findNonSpaceReverse_test();
     findSpaceReverse_test();
+    strcmp_test();
 }
 
 int main() {

@@ -25,4 +25,7 @@ char* findNonSpaceReverse(char *rbegin, const char *rend);
 //возвращает указатель на первый пробельный символ справа
 char* findSpaceReverse(char* rbegin, const char *rend);
 
+//возвращает равенство строк
+int strcmp_(const char *lhs, const char *rhs);
+
 #endif //LAB_OP_17_STRING__H
