@@ -32,3 +32,14 @@ char *findNonSpace(char *begin) {
 
     return begin;
 }
+
+char* findSpace(char *begin){
+    while (*begin != '\0'){
+        if (isspace(*begin))
+            return begin;
+
+        begin++;
+    }
+
+    return begin;
+}

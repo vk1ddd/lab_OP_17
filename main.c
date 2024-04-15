@@ -28,7 +28,7 @@ void find_test1() {
 void find_test2() {
     char str[] = "Hello, world!";
     char *result = find(str, str + 13, 'z');
-    assert(result == str + 13); // 'z' not found, should return end pointer
+    assert(result == str + 13);
 }
 
 void find_test(){
@@ -53,10 +53,28 @@ void findNonSpace_test(){
     findNonSpace_test2();
 }
 
+void findSpace_test1() {
+    char str[] = "Hello World";
+    char *result = findSpace(str);
+    assert(*result == ' ' && *result == *str + 5);
+}
+
+void findSpace_test2() {
+    char str[] = "";
+    char *result = findSpace(str);
+    assert(*result == '\0');
+}
+
+void findSpace_test(){
+    findSpace_test1();
+    findSpace_test2();
+}
+
 void test(){
     strlen_test();
     find_test();
     findNonSpace_test();
+    findSpace_test();
 }
 
 int main() {

@@ -15,4 +15,7 @@ char* find(char *begin, char *end, int ch);
 //возвращает указатель на первый символ, отличный от пробельных
 char* findNonSpace(char* begin);
 
+//возвращает указатель на первый пробельный символ
+char* findSpace(char *begin);
+
 #endif //LAB_OP_17_STRING__H
