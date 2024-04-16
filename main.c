@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <assert.h>
 #include "string/string_.h"
 
@@ -88,7 +87,7 @@ void findNonSpaceReverse_test3() {
     assert(*result == 'd' && result == str + 10);
 }
 
-void findNonSpaceReverse_test(){
+void findNonSpaceReverse_test() {
     findNonSpaceReverse_test1();
     findNonSpaceReverse_test2();
     findNonSpaceReverse_test3();
@@ -96,17 +95,17 @@ void findNonSpaceReverse_test(){
 
 void findSpaceReverse_test1() {
     char str[] = "Hello World";
-    char* result = findSpaceReverse(&str[10], str);
+    char *result = findSpaceReverse(&str[10], str);
     assert(*result == ' ');
 }
 
 void findSpaceReverse_test2() {
     char str[] = "Hello";
-    char* result = findSpaceReverse(&str[4], str);
+    char *result = findSpaceReverse(&str[4], str);
     assert(result == str);
 }
 
-void findSpaceReverse_test(){
+void findSpaceReverse_test() {
     findSpaceReverse_test1();
     findSpaceReverse_test2();
 }
@@ -127,7 +126,7 @@ void strcmp_test2() {
     assert(result < 0);
 }
 
-void strcmp_test(){
+void strcmp_test() {
     strcmp_test1();
     strcmp_test2();
 }
@@ -148,7 +147,7 @@ void copy_test2() {
     assert(*result == ' ');
 }
 
-void copy_test(){
+void copy_test() {
     copy_test1();
     copy_test2();
 }
@@ -165,7 +164,7 @@ void copyIf_test1() {
     const char source[] = "Hello World";
     char destination[50];
 
-    char *result = copyIf(source, source + strlen_(source), destination, isLowerCase);
+    copyIf(source, source + strlen_(source), destination, isLowerCase);
 
     assert(*destination == 'e' && strlen_(destination) == 8);
 }
@@ -189,7 +188,7 @@ void copyIfReverse_test1() {
     const char source[] = "Hello World";
     char destination[50];
 
-    char *result = copyIfReverse(source + strlen_(source), source, destination, isLowerCase);
+    copyIfReverse(source + strlen_(source), source, destination, isLowerCase);
 
     assert(*destination == 'd' && strlen_(destination) == 8);
 }
@@ -198,8 +197,7 @@ void copyIfReverse_test2() {
     const char source[] = "Hello23423 World";
     char destination[50];
 
-    char *result = copyIfReverse(source + strlen_(source), source, destination, isDigit);
-    *result = '\0';
+    copyIfReverse(source + strlen_(source), source, destination, isDigit);
 
     assert(*destination == '3' && strlen_(destination) == 5);
 }

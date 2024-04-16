@@ -20,16 +20,16 @@ char *findNonSpace(char *begin);
 char *findSpace(char *begin);
 
 //возвращает указатель на первый справа символ, отличный от пробельных
-char* findNonSpaceReverse(char *rbegin, const char *rend);
+char *findNonSpaceReverse(char *rbegin, const char *rend);
 
 //возвращает указатель на первый пробельный символ справа
-char* findSpaceReverse(char* rbegin, const char *rend);
+char *findSpaceReverse(char *rbegin, const char *rend);
 
 //возвращает равенство строк
 int strcmp_(const char *lhs, const char *rhs);
 
 //возвращает фрагмент памяти от beginSource до endSource
-char* copy(const char* beginSource, const char* endSource, char* beginDestination);
+char *copy(const char *beginSource, const char *endSource, char *beginDestination);
 
 //возвращает фрагмент памяти от beginSource до endSource, удовлетворяющий функции-предикату f
 char *copyIf(const char *beginSource, const char *endSource, char *beginDestination, int (*f)(int));
