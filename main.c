@@ -185,6 +185,30 @@ void copyIf_test() {
     copyIf_test2();
 }
 
+void copyIfReverse_test1() {
+    const char source[] = "Hello World";
+    char destination[50];
+
+    char *result = copyIfReverse(source + strlen_(source), source, destination, isLowerCase);
+
+    assert(*destination == 'd' && strlen_(destination) == 8);
+}
+
+void copyIfReverse_test2() {
+    const char source[] = "Hello23423 World";
+    char destination[50];
+
+    char *result = copyIfReverse(source + strlen_(source), source, destination, isDigit);
+    *result = '\0';
+
+    assert(*destination == '3' && strlen_(destination) == 5);
+}
+
+void copyIfReverse_test() {
+    copyIfReverse_test1();
+    copyIfReverse_test2();
+}
+
 void test() {
     strlen_test();
     find_test();
@@ -195,6 +219,7 @@ void test() {
     strcmp_test();
     copy_test();
     copyIf_test();
+    copyIfReverse_test();
 }
 
 int main() {

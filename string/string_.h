@@ -34,4 +34,7 @@ char* copy(const char* beginSource, const char* endSource, char* beginDestinatio
 //возвращает фрагмент памяти от beginSource до endSource, удовлетворяющий функции-предикату f
 char *copyIf(const char *beginSource, const char *endSource, char *beginDestination, int (*f)(int));
 
+//возвращает фрагмент памяти от rbeginSource до beginSource, удовлетворяющий функции-предикату f
+char *copyIfReverse(const char *rbeginSource, const char *beginSource, char *beginDestination, int (*f)(int));
+
 #endif //LAB_OP_17_STRING__H

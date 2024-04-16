@@ -97,3 +97,17 @@ char *copyIf(const char *beginSource, const char *endSource, char *beginDestinat
 
     return beginDestination;
 }
+
+
+char *copyIfReverse(const char *rbeginSource, const char *beginSource, char *beginDestination, int (*f)(int)){
+    while (rbeginSource != beginSource) {
+        if (f(*rbeginSource)) {
+            *beginDestination = *rbeginSource;
+            beginDestination++;
+        }
+
+        rbeginSource--;
+    }
+
+    return beginDestination;
+}
