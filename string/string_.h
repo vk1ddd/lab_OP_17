@@ -31,4 +31,7 @@ int strcmp_(const char *lhs, const char *rhs);
 //возвращает фрагмент памяти от beginSource до endSource
 char* copy(const char* beginSource, const char* endSource, char* beginDestination);
 
+//возвращает фрагмент памяти от beginSource до endSource, удовлетворяющий функции-предикату f
+char *copyIf(const char *beginSource, const char *endSource, char *beginDestination, int (*f)(int));
+
 #endif //LAB_OP_17_STRING__H

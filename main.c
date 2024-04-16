@@ -141,16 +141,48 @@ void copy_test1() {
 }
 
 void copy_test2() {
-    const char *source = "";
+    const char *source = " ";
     char destination[10];
-    char *result = copy(source, source, destination);
+    char *result = copy(source, source + 1, destination);
 
-    assert(*result == '\0');
+    assert(*result == ' ');
 }
 
 void copy_test(){
     copy_test1();
     copy_test2();
+}
+
+int isLowerCase(int c) {
+    return c >= 'a' && c <= 'z';
+}
+
+int isDigit(int c) {
+    return c >= '0' && c <= '9';
+}
+
+void copyIf_test1() {
+    const char source[] = "Hello World";
+    char destination[50];
+
+    char *result = copyIf(source, source + strlen_(source), destination, isLowerCase);
+
+    assert(*destination == 'e' && strlen_(destination) == 8);
+}
+
+void copyIf_test2() {
+    const char source[] = "Hello23423 World";
+    char destination[50];
+
+    char *result = copyIf(source, source + strlen_(source), destination, isDigit);
+    *result = '\0';
+
+    assert(*destination == '2' && strlen_(destination) == 5);
+}
+
+void copyIf_test() {
+    copyIf_test1();
+    copyIf_test2();
 }
 
 void test() {
@@ -162,6 +194,7 @@ void test() {
     findSpaceReverse_test();
     strcmp_test();
     copy_test();
+    copyIf_test();
 }
 
 int main() {

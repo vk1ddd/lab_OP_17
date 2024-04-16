@@ -82,9 +82,18 @@ char *copy(const char *beginSource, const char *endSource, char *beginDestinatio
         ++beginDestination;
     }
 
-    *beginDestination = '\0';
-
     return originalBeginDestination;
 }
 
+char *copyIf(const char *beginSource, const char *endSource, char *beginDestination, int (*f)(int)){
+    while (beginSource != endSource) {
+        if (f(*beginSource)) {
+            *beginDestination = *beginSource;
+            beginDestination++;
+        }
 
+        beginSource++;
+    }
+
+    return beginDestination;
+}
