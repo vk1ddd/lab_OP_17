@@ -132,6 +132,27 @@ void strcmp_test(){
     strcmp_test2();
 }
 
+void copy_test1() {
+    const char *source = "Hello";
+    char destination[10];
+    char *result = copy(source + 1, source + 4, destination);
+
+    assert(*result == 'e');
+}
+
+void copy_test2() {
+    const char *source = "";
+    char destination[10];
+    char *result = copy(source, source, destination);
+
+    assert(*result == '\0');
+}
+
+void copy_test(){
+    copy_test1();
+    copy_test2();
+}
+
 void test() {
     strlen_test();
     find_test();
@@ -140,6 +161,7 @@ void test() {
     findNonSpaceReverse_test();
     findSpaceReverse_test();
     strcmp_test();
+    copy_test();
 }
 
 int main() {

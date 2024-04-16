@@ -42,9 +42,9 @@ char *findSpace(char *begin) {
     return begin;
 }
 
-char* findNonSpaceReverse(char *rbegin, const char *rend){
-    while (rbegin != rend){
-        if(!isspace(*rbegin))
+char *findNonSpaceReverse(char *rbegin, const char *rend) {
+    while (rbegin != rend) {
+        if (!isspace(*rbegin))
             return rbegin;
 
         rbegin--;
@@ -53,9 +53,9 @@ char* findNonSpaceReverse(char *rbegin, const char *rend){
     return rbegin;
 }
 
-char* findSpaceReverse(char *rbegin, const char *rend){
-    while (rbegin != rend){
-        if(isspace(*rbegin))
+char *findSpaceReverse(char *rbegin, const char *rend) {
+    while (rbegin != rend) {
+        if (isspace(*rbegin))
             return rbegin;
 
         rbegin--;
@@ -64,7 +64,7 @@ char* findSpaceReverse(char *rbegin, const char *rend){
     return rbegin;
 }
 
-int strcmp_(const char *lhs, const char *rhs){
+int strcmp_(const char *lhs, const char *rhs) {
     while (*lhs != '\0' && *rhs != '\0' && *lhs == *rhs) {
         lhs++;
         rhs++;
@@ -72,3 +72,19 @@ int strcmp_(const char *lhs, const char *rhs){
 
     return *lhs - *rhs;
 }
+
+char *copy(const char *beginSource, const char *endSource, char *beginDestination) {
+    char *originalBeginDestination = beginDestination;
+
+    while (beginSource != endSource) {
+        *beginDestination = *beginSource;
+        ++beginSource;
+        ++beginDestination;
+    }
+
+    *beginDestination = '\0';
+
+    return originalBeginDestination;
+}
+
+

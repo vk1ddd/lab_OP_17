@@ -28,4 +28,7 @@ char* findSpaceReverse(char* rbegin, const char *rend);
 //возвращает равенство строк
 int strcmp_(const char *lhs, const char *rhs);
 
+//возвращает фрагмент памяти от beginSource до endSource
+char* copy(const char* beginSource, const char* endSource, char* beginDestination);
+
 #endif //LAB_OP_17_STRING__H
